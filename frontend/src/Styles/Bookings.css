@@ -1,0 +1,79 @@
+/* PAGE */
+.bookings-page {
+  padding: 60px 16px;
+  background: #f9fafb;
+  min-height: 100vh;
+}
+
+/* TITLE */
+.title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #111827;
+}
+
+/* WRAPPER */
+.table-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: #0f172a;
+  border-radius: 12px;
+  border: 1px solid;
+  overflow: hidden;
+}
+
+/* HEADER */
+.table-header {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  background: #0f172a;
+  padding: 14px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #fefefe;
+}
+
+/* ROW */
+.row {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  padding: 14px;
+  border-top: 1px solid #e5e7eb;
+  align-items: center;
+  font-size: 14px;
+  color: #fefefe;
+}
+
+/* SELECT */
+.row select {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  outline: none;
+  cursor: pointer;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .table-header {
+    display: none;
+  }
+
+  .row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .row span {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .row span::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #6b7280;
+  }
+}

@@ -1,0 +1,146 @@
+/* CONTAINER */
+.checkout-container {
+  min-height: 100vh;
+  background: #e7e7e7;
+  padding: 30px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* MAIN BOX */
+.checkout-box {
+  width: 100%;
+  max-width: 1000px;
+  background: #111c33;
+  border: 1px solid rgba(59, 244, 32, 0.3);
+  border-radius: 10px;
+  /* display: flex; */
+  gap: 20px;
+  padding: 20px;
+  color: #ffffff;
+}
+
+/* LEFT SIDE */
+.checkout-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.checkout-left h2 {
+  margin-bottom: 10px;
+  color: #fefefe;
+  font-weight: 600;
+}
+
+.checkout-left textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #3bf420;
+  background: #fefefe;
+  color: black;
+  resize: none;
+  outline: none;
+  font-size: 14px;
+}
+
+.checkout-left textarea::placeholder {
+  color: #9ca3af;
+}
+
+/* RIGHT SIDE */
+.checkout-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* SUMMARY */
+.summary-box {
+  border: 1px solid rgba(59, 244, 32, 0.3);
+  padding: 12px;
+  border-radius: 6px;
+  margin: 10px 0 20px 0;
+}
+
+.summary-box p {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+}
+
+.price {
+  font-weight: 600;
+  color: #3bf420;
+}
+
+/* PAYMENT */
+.checkout-right h2 {
+  color: #fefefe;
+  font-weight: 600;
+}
+
+.checkout-right h3 {
+  margin-top: 10px;
+  margin-bottom: 8px;
+}
+
+.payment-options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.payment-options label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* BUTTON */
+.checkout-right button {
+  margin-top: 20px;
+  padding: 12px;
+  background: #3bf420;
+  color: #0f172a;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.checkout-right button:hover {
+  background: #30c419;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .checkout-box {
+    flex-direction: column;
+  }
+
+  .checkout-left,
+  .checkout-right {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .checkout-container {
+    padding: 20px 10px;
+  }
+
+  .checkout-box {
+    padding: 15px;
+  }
+
+  .checkout-left textarea {
+    font-size: 13px;
+  }
+}

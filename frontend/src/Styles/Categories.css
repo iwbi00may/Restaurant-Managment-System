@@ -1,0 +1,129 @@
+.categories-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 70px 20px;
+  text-align: center;
+  /* background: linear-gradient(180deg, #fff 0%, #f7f7f7 100%); */
+}
+
+.categories-section {
+  background-color: #e7e7e7;
+}
+/* Title */
+.categories-hdr {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #222;
+  margin-bottom: 10px;
+  letter-spacing: -0.5px;
+}
+
+.categories-hdr span {
+  color: #3bf420;
+}
+
+/* Subtitle */
+.categories-subtitle {
+  max-width: 750px;
+  margin: 0 auto 45px;
+  color: #666;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* Grid */
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 28px;
+  padding: 10px;
+}
+
+/* Card (glass style) */
+.category-card {
+  position: relative;
+  padding: 25px 15px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+  transition: all 0.35s ease;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.category-card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 77, 77, 0.12), transparent 60%);
+  transform: scale(0);
+  transition: transform 0.4s ease;
+}
+
+.category-card:hover::before {
+  transform: scale(1);
+}
+
+.category-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+/* Image circle */
+.category-image-circle {
+  width: 85px;
+  height: 85px;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #3bf420;
+  background: #fff;
+  transition: transform 0.3s ease;
+}
+
+.category-card:hover .category-image-circle {
+  transform: scale(1.1) rotate(3deg);
+}
+
+.category-image-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Name */
+.category-name h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .categories-hdr {
+    font-size: 2rem;
+  }
+
+  .category-image-circle {
+    width: 75px;
+    height: 75px;
+  }
+}
+
+@media (max-width: 480px) {
+  .categories-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+
+  .categories-container {
+    padding: 50px 15px;
+  }
+}
